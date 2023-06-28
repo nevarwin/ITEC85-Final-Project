@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         body {
-            background-color: #EFF3EB;
+            background-color: #fff;
         }
 
         .background {
@@ -150,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             font-weight: 500;
             line-height: 42px;
             text-align: center;
-            color: #697c56;
+            color: #3ac162;
         }
 
         label {
@@ -158,7 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-top: 30px;
             font-size: 16px;
             font-weight: 500;
-            color: #697c56;
+            color: #3ac162;
 
         }
 
@@ -166,13 +166,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             display: block;
             height: 50px;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.07);
-            border-radius: 3px;
+            background-color: #3ac162;
+            border-radius: 10px;
+            border: .5px #CED4DA solid;
             padding: 0 10px;
             margin-top: 8px;
             font-size: 14px;
             font-weight: 300;
-            background-color: #e5e5e5;
+            background-color: #fff;
         }
 
         ::placeholder {
@@ -184,12 +185,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         button {
             margin-top: 50px;
             width: 100%;
-            background-color: #ffffff;
-            color: #697c56;
+            background-color: #3ac162;
+            color: #fff;
+            border-radius: 50px;
             padding: 15px 0;
             font-size: 18px;
             font-weight: 600;
-            border-radius: 5px;
             cursor: pointer;
         }
     </style>
@@ -203,11 +204,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form action="" method="post" onsubmit="return validateLoginForm()">
         <h3>Login Here</h3>
         <label for="username">Email</label>
-        <input type="text" placeholder="Email" id="email" name="email">
+        <input type="text" id="email" name="email">
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password">
+        <input type="password" id="password" name="password">
         <button>Log In</button>
-        <a href="./landingpage/landingpage.php" class="btn w-100">Cancel</a>
+        <a href="http://localhost/Mentor/index.html" class="btn w-100">Cancel</a>
     </form>
 
     <script>
