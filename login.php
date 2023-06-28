@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password = mysqli_real_escape_string($con, $password);
 
         // // Query the database to get the hashed password
-        $query = "SELECT * FROM clients WHERE email = '$email' LIMIT 1";
+        $query = "SELECT * FROM `admin` WHERE email = '$email' LIMIT 1";
         $result = mysqli_query($con, $query);
 
         if (
@@ -40,22 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['logged_in'] = true;
                 $_SESSION['id'] = $user_data['id'];
 
-                // if ($user_data['positionId'] == 1) {
-                //     header('location: http://localhost/admin2gh/adminTable.php');
-                //     echo "<script>alert('Log In Successfully!');</script>";
-                //     die;
-                // } else {
-                //     header('location: http://localhost/admin2gh/patientTable.php');
-                //     echo "<script>alert('Log In Successfully!');</script>";
-                //     die;
-                // }
-                header('location: http://localhost/admin2gh/homepage.php');
+                header('location: http://localhost/Mentor/NiceAdmin/table.php');
                 echo "<script>alert('Log In Successfully!');</script>";
                 die;
             } else {
                 // Incorrect password
                 echo "<script>alert('Incorrect password. Please try again.');</script>";
-                echo "<script>window.location.href = 'http://localhost/admin2gh/loginForm.php';</script>";
+                echo "<script>window.location.href = 'http://localhost/Mentor/index.html';</script>";
             }
         } else {
             // User not found
@@ -63,36 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<script>window.location.href = 'http://localhost/Mentor/index.html';</script>";
         }
 
-        // $query = "SELECT * FROM clients WHERE email = '$email' LIMIT 1";
-        // $result = mysqli_query($con, $query);
-
-        // if ($result && mysqli_num_rows($result) > 0) {
-        //     $user_data = mysqli_fetch_assoc($result);
-        //     if ($user_data['password'] === $password) {
-        //         $_SESSION['logged_in'] = true;
-        //         $_SESSION['id'] = $user_data['id'];
-        //         if ($user_data['positionId'] == 1) {
-        //             echo "
-        //             <script>
-        //                 alert('Log In Successfully!');
-        //             </script>
-        //             ";
-        //             header('location: http://localhost/admin2gh/adminTable.php');
-        //             die;
-        //         }
-        //         echo "
-        //             <script>
-        //                 alert('Log In Successfully!');
-        //             </script>
-        //             ";
-        //         header('location: http://localhost/admin2gh/patientTable.php');
-        //         die;
-        //     }
-        // }
         echo "
         <script>
             alert('Invalid Email or Password!');
-            //window.location = 'http://localhost/admin2gh/loginForm.php';
+            //window.location = 'http://localhost/Mentor/login.php';
         </script>
         ";
     } else {
