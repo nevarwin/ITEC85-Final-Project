@@ -1,6 +1,6 @@
 <?php
-include('connection.php');
-include('function.php');
+include('./connection.php');
+include('./function.php');
 
 $user_data = check_login($con);
 ?>
@@ -12,7 +12,7 @@ $user_data = check_login($con);
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>Tables / Data - NiceAdmin Bootstrap Template</title>
+  <title>ITEC85 - Admin</title>
   <meta content="" name="description" />
   <meta content="" name="keywords" />
 
@@ -51,7 +51,7 @@ $user_data = check_login($con);
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="" />
-        <span class="d-none d-lg-block">ITEC85 - Admin</span>
+        <span class="d-none d-lg-block">Admin</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>
@@ -66,25 +66,6 @@ $user_data = check_login($con);
       </form>
     </div>
     <!-- End Search Bar -->
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle" href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li>
-        <!-- End Search Icon-->
-
-        <li class="nav-item dropdown pe-3">
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <span class="mr-2 d-lg-inline d-md-inline d-sm-inline d-xs-inline text-gray-600 small"><?= $user_data['name']; ?></span>
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" />
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- End Icons Navigation -->
   </header>
   <!-- End Header -->
 
@@ -99,7 +80,7 @@ $user_data = check_login($con);
       <!-- End Tables Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="http://localhost/Mentor/login.php">
           <i class="bi bi-box-arrow-right"></i>
           <span>Logout</span>
         </a>
@@ -110,26 +91,16 @@ $user_data = check_login($con);
   <!-- End Sidebar-->
 
   <main id="main" class="main">
-    <div class="pagetitle">
-      <h1>Data Tables</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Tables</li>
-          <li class="breadcrumb-item active">Data</li>
-        </ol>
-      </nav>
-    </div>
-    <!-- End Page Title -->
 
-    <section class="section">
+    <section class="section container-fluid">
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-
-              <h5 class="card-title">Students Table</h5>
-
+              <div class="row justify-content-evenly">
+                <h5 class="card-title d-inline">Students Table</h5>
+                <a href="http://localhost/Mentor/studentCreate.php" class="btn btn-primary ml-auto">Add new student</a>
+              </div>
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
@@ -137,34 +108,36 @@ $user_data = check_login($con);
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Address</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
                   // read all the data from db table
-                  $sql = "SELECT * FROM `admin`";
+                  $sql = "SELECT * FROM `student`";
                   $result = mysqli_query($con, $sql);
 
                   // check if there is data in the table
                   if (mysqli_num_rows($result) > 0) {
-                    foreach ($result as $admins) {
+                    foreach ($result as $students) {
                   ?>
                       <tr>
-                        <td><?= $admins['id']; ?></td>
-                        <td><?= $admins['name']; ?></td>
-                        <td><?= $admins['email']; ?></td>
+                        <td><?= $students['id']; ?></td>
+                        <td><?= $students['studentName']; ?></td>
+                        <td><?= $students['email']; ?></td>
+                        <td><?= $students['contact_number']; ?></td>
+                        <td><?= $students['address']; ?></td>
                         <td>
-                          <a class="btn btn-primary btn-sm btn-block my-1" href="http://localhost/admin2gh/adminPage-update.php?id=<?= $admins['id']; ?>">Update</a>
-                          <a class="btn btn-danger btn-sm btn-block my-1" href="http://localhost/admin2gh/components/adminForm-remove.php?id=<?= $admins['id']; ?>">Remove</a>
-                        <?php
-                      }
-                        ?>
+                          <a class="btn btn-primary btn-sm btn-block my-1" href="http://localhost/Mentor/studentUpdate.php?id=<?= $students['id']; ?>">Update</a>
+                          <a class="btn btn-danger btn-sm btn-block my-1" href="http://localhost/Mentor/studentRemove.php?id=<?= $students['id']; ?>">Remove</a>
                         </td>
                       </tr>
-                    <?php
+                  <?php
+                    }
                   }
-                    ?>
+                  ?>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
