@@ -46,12 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 // Incorrect password
                 echo "<script>alert('Incorrect password. Please try again.');</script>";
-                echo "<script>window.location.href = 'http://localhost/Mentor/index.html';</script>";
+                echo "<script>window.location.href = 'http://localhost/Mentor/index.php';</script>";
             }
         } else {
             // User not found
             echo "<script>alert('User not found. Please try again.');</script>";
-            echo "<script>window.location.href = 'http://localhost/Mentor/index.html';</script>";
+            echo "<script>window.location.href = 'http://localhost/Mentor/index.php';</script>";
         }
 
         echo "
@@ -209,7 +209,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="password" id="password" name="password">
         <button>Log In</button>
         <a href="loginStudent.php" class="btn w-100">Login as Student</a>
-        <a href="http://localhost/Mentor/index.html" class="btn w-100">Cancel</a>
+        <a href="http://localhost/Mentor/index.php" class="btn w-100">Cancel</a>
     </form>
 
     <script>

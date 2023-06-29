@@ -212,7 +212,7 @@ mysqli_close($con);
         <input type="password" id="password" name="password">
         <button>Log In</button>
         <a href="login.php" class="btn w-100">Login as Admin</a>
-        <a href="http://localhost/Mentor/index.html" class="btn w-100">Cancel</a>
+        <a href="http://localhost/Mentor/index.php" class="btn w-100">Cancel</a>
     </form>
 
     <script>

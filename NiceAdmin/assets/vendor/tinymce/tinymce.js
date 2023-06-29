@@ -10977,9 +10977,9 @@
             return index;
           } else if (startMatch[1] === '!') {
             if (startsWith(startMatch[2], '--')) {
-              index = findCommentEndIndex(html, false, startMatch.index + '!--'.length);
+              index = findCommentEndindex.php, false, startMatch.index + '!--'.length);
             } else {
-              index = findCommentEndIndex(html, true, startMatch.index + 1);
+              index = findCommentEndindex.php, true, startMatch.index + 1);
             }
             break;
           } else {
