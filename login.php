@@ -202,12 +202,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="shape"></div>
     </div>
     <form action="" method="post" onsubmit="return validateLoginForm()">
-        <h3>Login Here</h3>
+        <h3>Admin Login</h3>
         <label for="username">Email</label>
         <input type="text" id="email" name="email">
         <label for="password">Password</label>
         <input type="password" id="password" name="password">
         <button>Log In</button>
+        <a href="loginStudent.php" class="btn w-100">Login as Student</a>
         <a href="http://localhost/Mentor/index.html" class="btn w-100">Cancel</a>
     </form>
 

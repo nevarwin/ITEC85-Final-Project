@@ -48,12 +48,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 // Incorrect password
                 echo "<script>alert('Incorrect password. Please try again.');</script>";
-                // echo "<script>window.location.href = 'http://localhost/Mentor/loginStudent.php';</script>";
+                echo "<script>window.location.href = 'http://localhost/Mentor/loginStudent.php';</script>";
             }
         } else {
             // User not found
             echo "<script>alert('User not found. Please try again.');</script>";
-            // echo "<script>window.location.href = 'http://localhost/Mentor/loginStudent.php';</script>";
+            echo "<script>window.location.href = 'http://localhost/Mentor/loginStudent.php';</script>";
         }
 
         echo "
@@ -205,12 +205,13 @@ mysqli_close($con);
         <div class="shape"></div>
     </div>
     <form action="" method="post" onsubmit="return validateLoginForm()">
-        <h3>Login Here</h3>
+        <h3>Student Login</h3>
         <label for="username">Email</label>
         <input type="text" id="email" name="email">
         <label for="password">Password</label>
         <input type="password" id="password" name="password">
         <button>Log In</button>
+        <a href="login.php" class="btn w-100">Login as Admin</a>
         <a href="http://localhost/Mentor/index.html" class="btn w-100">Cancel</a>
     </form>
 
