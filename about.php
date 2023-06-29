@@ -1,6 +1,9 @@
 <?php
-$name = isset($_SESSION['studentName']) ? $_SESSION['studentName'] : '';
+session_start();
 
+include("connection.php");
+
+$name = isset($_SESSION['studentName']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

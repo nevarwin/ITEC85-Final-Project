@@ -3,7 +3,7 @@ session_start();
 
 include("connection.php");
 
-$name = isset($_SESSION['studentName']) ? $_SESSION['studentName'] : '';
+$name = isset($_SESSION['studentName']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Process the form submission and save the discussion
