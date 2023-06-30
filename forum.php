@@ -134,23 +134,7 @@ $discussions = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <section id="course-details" class="course-details">
       <div class="container" data-aos="fade-up">
         <div class="row">
-          <div class="col-lg-4">
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Recommended Books</h5>
-              <a href="#1">Books</a>
-            </div>
-
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Recommended Websites</h5>
-              <a href="#2">Websites</a>
-            </div>
-
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Recommended Online Courses</h5>
-              <a href="#3">Courses</a>
-            </div>
-          </div>
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <?php if (isset($_SESSION['studentName'])) : ?> <h2>Welcome, <?php echo ucfirst($name); ?></h2>
               <h3>Post a new discussion</h3>
               <form method="POST" action="">
