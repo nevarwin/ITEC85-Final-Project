@@ -417,6 +417,27 @@ $name = isset($_SESSION['studentName']);
               </div>
             </div>
           </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-4.jpg" class="img-fluid" alt="" />
+              <div class="member-content">
+                <h4>Elizalyn Bayan</h4>
+                <span>Cryptography</span>
+                <p>
+                  This individual is an experienced cryptography mentor, who
+                  teaches others how to use encryption, key management, and
+                  security standards.
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
