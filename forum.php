@@ -158,13 +158,13 @@ $discussions = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <?php if (!empty($discussions)) : ?>
               <div class="list-group">
                 <?php foreach ($discussions as $discussion) : ?>
-                  <a href="#" class="list-group-item">
+                  <span href="" class="list-group-item">
                     <h4 class="list-group-item-heading"><?php echo $discussion['title']; ?></h4>
                     <p class="list-group-item-text"><?php echo $discussion['content']; ?></p>
                     <?php if (isset($discussion['studentName'])) : ?>
                       <p class="list-group-item-text">Created by: <?php echo $discussion['studentName']; ?></p>
                     <?php endif; ?>
-                  </a>
+                  </span>
                 <?php endforeach; ?>
               </div>
             <?php else : ?>
