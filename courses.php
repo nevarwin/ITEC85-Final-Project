@@ -100,16 +100,14 @@ $name = isset($_SESSION['studentName']);
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch py-2">
-            <div class py-2="course-item">
+            <div class="course-item">
               <img src="assets/img/course-1.jpg" class="img-fluid" alt="..." />
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>Security</h4>
-                  <p class="price">FREE</p>
                 </div>
-
                 <h3>
-                  <a href="chapter1.html">Fundamentals of Information Security</a>
+                  <a href="chapter1.php">Fundamentals of Information Security</a>
                 </h3>
                 <p>
                   Explore the foundational concepts and principles of
@@ -128,11 +126,9 @@ $name = isset($_SESSION['studentName']);
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>Security</h4>
-                  <p class="price">FREE</p>
                 </div>
-
                 <h3>
-                  <a href="chapter2.html">Network Security</a>
+                  <a href="chapter2.php">Network Security</a>
                 </h3>
                 <p>
                   Learn how to protect computer networks from unauthorized
@@ -153,10 +149,10 @@ $name = isset($_SESSION['studentName']);
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>Security</h4>
-                  <p class="price">FREE</p>
+
                 </div>
 
-                <h3><a href="chapter3.html">Cryptography</a></h3>
+                <h3><a href="chapter3.php">Cryptography</a></h3>
                 <p>
                   Learn how to protect computer networks from unauthorized
                   access, attacks, and data breaches. Understand different
@@ -176,10 +172,10 @@ $name = isset($_SESSION['studentName']);
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>Security</h4>
-                  <p class="price">FREE</p>
+
                 </div>
 
-                <h3><a href="chapter4.html">Web Application Security</a></h3>
+                <h3><a href="chapter4.php">Web Application Security</a></h3>
                 <p>
                   Gain insights into securing web applications from
                   vulnerabilities and attacks. Explore techniques to mitigate
@@ -199,11 +195,11 @@ $name = isset($_SESSION['studentName']);
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>Security</h4>
-                  <p class="price">FREE</p>
+
                 </div>
 
                 <h3>
-                  <a href="chapter5.html">Incident Response and Forensics</a>
+                  <a href="chapter5.php">Incident Response and Forensics</a>
                 </h3>
                 <p>
                   Learn how to effectively respond to and investigate security
@@ -223,10 +219,10 @@ $name = isset($_SESSION['studentName']);
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4>Security</h4>
-                  <p class="price">FREE</p>
+
                 </div>
 
-                <h3><a href="chapter6.html">Ethical Hacking</a></h3>
+                <h3><a href="chapter6.php">Ethical Hacking</a></h3>
                 <p>
                   Delve into the world of ethical hacking and learn how to
                   identify and fix vulnerabilities in computer systems.
@@ -293,23 +289,23 @@ $name = isset($_SESSION['studentName']);
             <ul>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter1.html">Information Security</a>
+                <a href="chapter1.php">Information Security</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter2.html">Network Security</a>
+                <a href="chapter2.php">Network Security</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter3.html">Cryptography</a>
+                <a href="chapter3.php">Cryptography</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter4.html">Web Application Security</a>
+                <a href="chapter4.php">Web Application Security</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter5.html">Incident Response and Forensics</a>
+                <a href="chapter5.php">Incident Response and Forensics</a>
               </li>
             </ul>
           </div>

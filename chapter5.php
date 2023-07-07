@@ -533,23 +533,23 @@ $name = isset($_SESSION['studentName']);
             <ul>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter1.html">Information Security</a>
+                <a href="chapter1.php">Information Security</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter2.html">Network Security</a>
+                <a href="chapter2.php">Network Security</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter3.html">Cryptography</a>
+                <a href="chapter3.php">Cryptography</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter4.html">Web Application Security</a>
+                <a href="chapter4.php">Web Application Security</a>
               </li>
               <li>
                 <i class="bx bx-chevron-right"></i>
-                <a href="chapter5.html">Incident Response and Forensics</a>
+                <a href="chapter5.php">Incident Response and Forensics</a>
               </li>
             </ul>
           </div>

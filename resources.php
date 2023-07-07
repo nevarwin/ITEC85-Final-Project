@@ -50,7 +50,7 @@
           <li><a href="about.php">About</a></li>
           <li><a href="courses.php">Courses</a></li>
           <li><a href="contact.php">Contact</a></li>
-          <li><a class="active" href="resources.html">Resources</a></li>
+          <li><a class="active" href="resources.php">Resources</a></li>
           <li><a href="forum.php">Forum</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
