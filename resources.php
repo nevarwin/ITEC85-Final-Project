@@ -1,3 +1,14 @@
+<?php
+if (isset($_GET['logout'])) {
+  // Log out the student
+  session_unset();
+  session_destroy();
+  header("Location: loginStudent.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

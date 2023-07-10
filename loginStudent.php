@@ -77,6 +77,8 @@ mysqli_close($con);
     <link rel="shortcut icon" href="./assets/img/caviteLogo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="https://img.icons8.com/ios-filled/50/000000/login-rounded-right.png" type="image/x-icon">
+
     <!-- Bootstrap v5.1.3 CDNs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
